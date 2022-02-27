@@ -1,5 +1,10 @@
 # Changelog
 
+## \[1.0.0-rc.6]
+
+- Added `i686-pc-windows-msvc` to the prebuilt targets.
+  - [fb6744da](https://www.github.com/tauri-apps/tauri/commit/fb6744daa45165c7e00e5c01f7df0880d69ca509) feat(cli.js): add 32bit cli for windows ([#3540](https://www.github.com/tauri-apps/tauri/pull/3540)) on 2022-02-24
+
 ## \[1.0.0-rc.5]
 
 - Improve "waiting for your dev server to start" message.

@@ -1,5 +1,18 @@
 # Changelog
 
+## \[1.0.0-rc.4]
+
+- Revert the `clap` usage back to the version 3.0 API.
+  - [2b554c38](https://www.github.com/tauri-apps/tauri/commit/2b554c38a5181b948d7674b6ef33e4049ca7d327) fix(core): revert to clap 3.0 API, allow deprecations, closes [#3549](https://www.github.com/tauri-apps/tauri/pull/3549) ([#3552](https://www.github.com/tauri-apps/tauri/pull/3552)) on 2022-02-24
+- The `tauri::api::process::Command` API now properly reads stdout and stderr messages that ends with a carriage return (`\r`) instead of just a newline (`\n`).
+  - [0a0de8ab](https://www.github.com/tauri-apps/tauri/commit/0a0de8ab6ed80b7722012e83636dff41a813b770) fix: read Command output ending with a carriage return, closes [#3508](https://www.github.com/tauri-apps/tauri/pull/3508) ([#3523](https://www.github.com/tauri-apps/tauri/pull/3523)) on 2022-02-24
+- Fixes `Command::output` and `Command::status` deadlock when running on async commands.
+  - [0163489e](https://www.github.com/tauri-apps/tauri/commit/0163489ed60ec0fe9486b5556ec0234499852a16) fix(core): `safe_block_on` usage on async contexts, closes [#3505](https://www.github.com/tauri-apps/tauri/pull/3505) ([#3513](https://www.github.com/tauri-apps/tauri/pull/3513)) on 2022-02-24
+- The HTTP scope now matches the entire URL using a glob pattern instead of only its path.
+  - [944b124c](https://www.github.com/tauri-apps/tauri/commit/944b124ce04a15a415fcbb0afdfa78b0e900c97a) feat(core): enhance HTTP scope glob validation, closes [#3507](https://www.github.com/tauri-apps/tauri/pull/3507) ([#3515](https://www.github.com/tauri-apps/tauri/pull/3515)) on 2022-02-24
+- Allow range in the form of `bytes=0-*` on the asset protocol.
+  - [d06efc77](https://www.github.com/tauri-apps/tauri/commit/d06efc7704092a549c886be701122ad420db5543) fix(core): parse range `bytes=0-*`, closes [#3143](https://www.github.com/tauri-apps/tauri/pull/3143) ([#3516](https://www.github.com/tauri-apps/tauri/pull/3516)) on 2022-02-24
+
 ## \[1.0.0-rc.3]
 
 - `tauri::plugin::Builder` closures are no longer required to implement `Sync`.

@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.3.3]
+
+- Print a warning to stderr if the window transparency has been set to true but `macos-private-api` is not enabled.
+  - [080755b5](https://www.github.com/tauri-apps/tauri/commit/080755b5377a3c0a17adf1d03e63555350422f0a) feat(core): warn if private APIs are not enabled, closes [#3481](https://www.github.com/tauri-apps/tauri/pull/3481) ([#3511](https://www.github.com/tauri-apps/tauri/pull/3511)) on 2022-02-19
+
 ## \[0.3.2]
 
 - Fix requirements for `RuntimeHandle`, `ClipboardManager`, `GlobalShortcutHandle` and `TrayHandle`.

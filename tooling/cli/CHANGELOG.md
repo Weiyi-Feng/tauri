@@ -1,5 +1,14 @@
 # Changelog
 
+## \[1.0.0-rc.7]
+
+- Properly create the updater bundle for all generated Microsoft Installer files.
+  - Bumped due to a bump in tauri-bundler.
+  - [6a6f1e7b](https://www.github.com/tauri-apps/tauri/commit/6a6f1e7bf922bc6fa56db2e8e40affbb0849731d) fix(bundler): build updater bundle for all .msi files ([#3520](https://www.github.com/tauri-apps/tauri/pull/3520)) on 2022-02-24
+- Fixes the Microsoft Installer launch path.
+  - Bumped due to a bump in tauri-bundler.
+  - [8d699283](https://www.github.com/tauri-apps/tauri/commit/8d699283a4741c83b476fb079dc0333c7bf4f919) fix(bundler): Auto-launch app from install location, closes [#3547](https://www.github.com/tauri-apps/tauri/pull/3547) ([#3553](https://www.github.com/tauri-apps/tauri/pull/3553)) on 2022-02-24
+
 ## \[1.0.0-rc.6]
 
 - Improve "waiting for your dev server to start" message.

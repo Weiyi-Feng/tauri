@@ -326,13 +326,7 @@ fn resolve_path<R: Runtime>(
   let env = window.state::<Env>().inner();
   match crate::api::path::resolve_path(config, package_info, env, &path, dir) {
     Ok(path) => {
-      if window.state::<Scopes>().fs.is_allowed(&path) {
-        Ok(SafePathBuf(path))
-      } else {
-        Err(anyhow::anyhow!(
-          crate::Error::PathNotAllowed(path).to_string()
-        ))
-      }
+      Ok(SafePathBuf(path))
     }
     Err(e) => super::Result::<SafePathBuf>::Err(e.into())
       .with_context(|| format!("path: {}, base dir: {:?}", path.0.display(), dir)),
